@@ -5,7 +5,18 @@ class BinarySearchTree:
         self.right = None
 
     def depth_first_for_each(self, cb):
-        pass
+        current_node = self
+
+        # creating helper function since I want to recurse using a node as a parameter
+        def helper(node, cb):
+            cb(node.value)
+            # if node left or right exist, recurse with that left or right node
+            if node.left:
+                helper(node.left, cb)
+            if node.right:
+                helper(node.right, cb)
+
+        helper(current_node, cb)
 
     def breadth_first_for_each(self, cb):
         # initializing variables
