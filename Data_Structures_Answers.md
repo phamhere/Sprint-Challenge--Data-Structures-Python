@@ -1,9 +1,9 @@
 Add your answers to the questions below.
 
 1. What is the runtime complexity of your `depth_first_for_each` method?
-
+   `O(n)` since it's being called n times for each node in the BST.
 2. What is the space complexity of your `depth_first_for_each` function?
-
+   `O(n)` since we're placing the number of nodes in the BST as functions onto the call stack.
 3. What is the runtime complexity of your `breadth_first_for_each` method?
    `O(n)` since we're going through all the values of the BST.
 4. What is the space complexity of your `breadth_first_for_each` method?
